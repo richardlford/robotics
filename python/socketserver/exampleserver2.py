@@ -39,19 +39,23 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
         try:
             decoded = self.data.decode("utf-8")
             print("decoded = {}".format(decoded))
-            if decoded[0] == ":":
-                # Note: Addeding globals() as the second argument executes the
-                # command in the global scope, so that variables values are kept.
-                exec(decoded[1:], globals())
-                result = "Executed: {}".format(decoded[1:])
-            else:
+            
+            # First try to evaluate as expression.
+            try:
                 raw_output = eval(decoded)
                 print("raw_output = {}".format(raw_output))
                 result = str(raw_output)
                 print("result = {}".format(result))
+            except:
+                # Execute as statement.
+                
+                # Note: Addeding globals() as the second argument executes the
+                # command in the global scope, so that variables values are kept.
+                exec(decoded, globals())
+                result = "Executed: {}".format(decoded)
         except:
             result = "Unexpected error: {}".format(sys.exc_info())
-            print(result)
+        print(result)
         resultbytes = bytes(result + "\n", "utf-8")
         print("resultbytes = {}".format(resultbytes))
         # just send back the same data, but upper-cased

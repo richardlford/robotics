@@ -1,5 +1,6 @@
 import socketserver
 import socket
+import sys
 
 def get_ip():
     s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
@@ -31,8 +32,25 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
         self.data = self.request.recv(1024).strip()
         print("{} wrote:".format(self.client_address[0]))
         print(self.data)
+        try:
+            decoded = self.data.decode("utf-8")
+            print("decoded = {}".format(decoded))
+            if decoded[0] == ":":
+                exec(decoded[1:])
+                result = "Executed: {}".format(decoded[1:])
+            else:
+                raw_output = eval(decoded)
+                print("raw_output = {}".format(raw_output))
+                result = str(raw_output)
+                print("result = {}".format(result))
+        except:
+            result = "Unexpected error: {}".format(sys.exc_info())
+            print(result)
+        resultbytes = bytes(result + "\n", "utf-8")
+        print("resultbytes = {}".format(resultbytes))
         # just send back the same data, but upper-cased
-        self.request.sendall(self.data.upper())
+        self.request.sendall(resultbytes)
+
 
 if __name__ == "__main__":
     HOST, PORT = external_ip, 9999

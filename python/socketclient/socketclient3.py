@@ -10,11 +10,30 @@ PORT=9999
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
     # Connect to server and send data
     sock.connect((HOST, PORT))
-    while True:
+    ok = True
+    while ok:
         print("Command?", end=" ")
-        data=input()
-        sock.sendall(bytes(data + "\n", "utf-8"))
-        print("Sent:     {}".format(data))
-        # Receive data from the server and shut down
-        received = str(sock.recv(1024), "utf-8")
-        print("Received: {}".format(received))
+        try:
+            data=input()
+            try:
+                sock.sendall(bytes(data + "\n", "utf-8"))
+            except:
+                print("Send error")
+                ok = False
+                
+                
+            if ok:
+                print("Sent:     {}".format(data))
+                # Receive data from the server and shut down
+                try:
+                    received = str(sock.recv(1024), "utf-8")
+                    if received == "":
+                        print("receive error (got nothing), assume server went away")
+                        ok = False
+                    else:
+                        print("Received: {}".format(received))
+                except:
+                    print("receive error")
+        except EOFError:
+            print("Exiting")
+            ok = False

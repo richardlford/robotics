@@ -34,34 +34,45 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
     def handle(self):
         # self.request is the TCP socket connected to the client
         csocket = self.request
-        while True:
-            self.data = csocket.recv(1024).strip()
-            print("{} wrote:".format(self.client_address[0]))
-            print(self.data)
-            try:
-                decoded = self.data.decode("utf-8")
-                print("decoded = {}".format(decoded))
-                
-                # First try to evaluate as expression.
+        client = self.client_address[0]
+        try:
+            while True:
                 try:
-                    raw_output = eval(decoded)
-                    print("raw_output = {}".format(raw_output))
-                    result = str(raw_output)
-                    print("result = {}".format(result))
+                    self.data = csocket.recv(1024).strip()
+                except KeyboardInterrupt:
+                    print("Terminating session with {} because serving terminated".format(client))
+                    raise
                 except:
-                    # Execute as statement.
+                    print("Socket read from {} failed, terminating".format(client))
+                    return
+                try:
+                    decoded = self.data.decode("utf-8")
+                    print("{c} wrote: {d}".format(c=client, d=decoded))
                     
-                    # Note: Addeding globals() as the second argument executes the
-                    # command in the global scope, so that variables values are kept.
-                    exec(decoded, globals())
-                    result = "Executed: {}".format(decoded)
-            except:
-                result = "Unexpected error: {}".format(sys.exc_info())
-            print(result)
-            resultbytes = bytes(result + "\n", "utf-8")
-            print("resultbytes = {}".format(resultbytes))
-            # just send back the same data, but upper-cased
-            csocket.sendall(resultbytes)
+                    # First try to evaluate as expression.
+                    try:
+                        raw_output = eval(decoded)
+                        #print("raw_output = {}".format(raw_output))
+                        result = str(raw_output)
+                        #print("result = {}".format(result))
+                    except:
+                        # Execute as statement.
+                        
+                        # Note: Addeding globals() as the second argument executes the
+                        # command in the global scope, so that variables values are kept.
+                        exec(decoded, globals())
+                        result = "Executed: {}".format(decoded)
+                except:
+                    result = "Unexpected error: {}".format(sys.exc_info())
+                    return
+                print("result=", result)
+                resultbytes = bytes(result + "\n", "utf-8")
+                # print("resultbytes = {}".format(resultbytes))
+                # just send back the same data, but upper-cased
+                csocket.sendall(resultbytes)
+        except BrokenPipeError:
+            print("Broken pipe, assume client {} went away".format(client))
+            return
 
 
 if __name__ == "__main__":
@@ -69,6 +80,10 @@ if __name__ == "__main__":
 
     # Create the server, binding to localhost on port 9999
     with socketserver.TCPServer((HOST, PORT), MyTCPHandler) as server:
-        # Activate the server; this will keep running until you
-        # interrupt the program with Ctrl-C
-        server.serve_forever()
+        try:
+            # Activate the server; this will keep running until you
+            # interrupt the program with Ctrl-C
+            server.serve_forever()
+        except KeyboardInterrupt:
+            # except the program gets interrupted by Ctrl+C on the keyboard.
+            print("Server terminated")

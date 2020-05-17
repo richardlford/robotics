@@ -1,3 +1,7 @@
+# Sample python server that accepts commands over a socket and executes them.
+# This version first tries to evaluate the command as an expression and if
+# that succeeds reports the result. If that fails then it is executed as a
+# statement in the global scope. If that also fails an error message is given.
 import socketserver
 import socket
 import sys

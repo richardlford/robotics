@@ -1,3 +1,7 @@
+# Sample python server that accepts commands over a socket and executes them.
+# This version requires the user to prefix statements with ":". Commands not
+# starting with ":" are evaluated and their results returned.
+
 import socketserver
 import socket
 import sys

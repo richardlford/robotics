@@ -1,0 +1,20 @@
+<!– -*- mode: org; -*- –>
+* Robotics Journal for May 2020
+** 5-10
+I experimented with remote control of brickpi3 by means of 
+a python socket server running on the brickpi3. 
+See the python/socketserver directory. There are two versions.
+As it turns out, in Python, eval() can evaluate expressions but
+not statements, but exec can evaluate either, but always returns
+None. My first version, exampleserver.py, requires the user to
+prefix statements with ":". My smarter version, 
+exampleserver2.py, first tries to evaluate, and if that fails,
+then will exec. 
+
+Also, at first I was not giving a "globals()" argument to exec()
+so any definitions were not in the global scope. I was having to
+go through gymnastics to get persistence. But then further research
+revealed the way of getting the execution in the global scope.
+
+This work paves the way for clients, e.g. on ipad, to remotely
+control the brickpi3. 

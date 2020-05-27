@@ -18,3 +18,105 @@ revealed the way of getting the execution in the global scope.
 
 This work paves the way for clients, e.g. on ipad, to remotely
 control the brickpi3. 
+
+* Links
+** 5-12
+- https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app
+- https://developer.apple.com/documentation/xcode/creating_a_standalone_swift_package_with_xcode
+- https://developer.apple.com/documentation/xcode/adding_package_dependencies_to_your_app
+- https://github.com/apple/swift-package-manager
+- https://swift.org/package-manager/
+- https://swift.org/getting-started/#using-the-package-manager
+- https://developer.apple.com/documentation/swift_packages
+- https://learnappmaking.com/unresolved-identifier-understanding-xcode/
+- https://www.raywenderlich.com/861-websockets-on-ios-with-starscream
+- https://github.com/daltoniam/Starscream
+- https://medium.com/@marklucking/naked-networking-with-swiftui-3f20b809d7f4
+- https://github.com/socketio/socket.io-client-swift
+- https://developer.apple.com/library/archive/documentation/NetworkingInternetWeb/Conceptual/NetworkingOverview/Introduction/Introduction.html#//apple_ref/doc/uid/TP40010220-CH12-BBCFIHFH
+- https://github.com/appcoda/SocketIOChat
+- https://www.appcoda.com/socket-io-chat-app/
+- https://www.raywenderlich.com/3437391-real-time-communication-with-streams-tutorial-for-ios
+- https://www.youtube.com/watch?v=VGJBLlfSN-Y&list=PLuoeXyslFTuaZtX7xSYbWz3TR0Vpz39gK
+- https://pinout.xyz/pinout/spi#
+- https://docs.swift.org/swift-book/ReferenceManual/Attributes.html
+** 5-21
+- https://forums.raywenderlich.com/t/part-1-hello-world/38922/1
+- Mixing UIKit and SwiftUI
+  https://medium.com/@kwylez/mixing-uikit-and-swiftui-cff8581be341
+- UITextField
+  https://developer.apple.com/documentation/uikit/uitextfield
+- UITextFieldDelegate
+  https://developer.apple.com/documentation/uikit/uitextfielddelegate
+- How to detect keyboard input using pressesBegan() and pressesEnded()
+  https://www.hackingwithswift.com/example-code/uikit/how-to-detect-keyboard-input-using-pressesbegan-and-pressesended
+- Keyboard Listener in List in SwiftUI
+  https://stackoverflow.com/questions/57753060/keyboard-listener-in-list-in-swiftui
+- https://github.com/scratchblocks/scratchblocks
+- https://github.com/LLK/scratchblocks
+- https://github.com/LLK
+- SwiftUI Form tutorial for beginners
+  https://programmingwithswift.com/swiftui-form-beginners-guide/
+- How to create a toggle switch
+  https://www.hackingwithswift.com/quick-start/swiftui/how-to-create-a-toggle-switch
+- How to create views in a loop using ForEach
+  https://www.hackingwithswift.com/quick-start/swiftui/how-to-create-views-in-a-loop-using-foreach
+- SubscriptionView
+  https://developer.apple.com/documentation/swiftui/subscriptionview
+- DNSServiceGetAddrInfo(_:_:_:_:_:_:_:)
+  https://developer.apple.com/documentation/dnssd/1804700-dnsservicegetaddrinfo
+  https://developer.apple.com/documentation/dnssd/1804700-dnsservicegetaddrinfo?language=objc
+- DNS Service Discovery C
+  https://developer.apple.com/documentation/dnssd/dns_service_discovery_c#//apple_ref/c/func/DNSServiceQueryRecord
+- SRVResolver.m
+  https://developer.apple.com/library/archive/samplecode/SRVResolver/Listings/SRVResolver_m.html#//apple_ref/doc/uid/DTS40009625-SRVResolver_m-DontLinkElementID_5
+- Resolving SRV records with iOS SDK
+  https://stackoverflow.com/questions/22502729/resolving-srv-records-with-ios-sdk
+- GPIO Pins used by Sense Hat
+  https://www.raspberrypi.org/app/uploads/2015/08/Sense-HAT-V1_0.pdf
+  3,5,19,21,23,27,4,6,16,18,22,24 and 28.
+  Pin 1 for 3V3 power - (so it is still available for use).
+  Pin 2 & 4 for 5V power - (so it is still available for use).
+  Pin 6, 9, 14, 20, 25, 30, 34 & 39 for Gnd - (so they are still available for use).
+  Pin 3 & Pin 5 for i2c - (so still available for other i2c devices to connect, some i2c addresses will have been used by the HAT).
+  Pins 16, 18 & 22 (no longer available for use).
+  Pins 19, 21, 23 & 24 as SPI (so 19, 21, 23 & 26 would be available to use as the 2nd SPI on CE1).
+- iOS : DNS SRV lookup using DNSServiceQueryRecord
+  https://stackoverflow.com/questions/37557307/ios-dns-srv-lookup-using-dnsservicequeryrecord
+- https://justanapplication.wordpress.com/category/ios/ios_api/dns_sd_api/dnsservicequeryrecord/
+- https://docs.oracle.com/cd/E36784_01/html/E36875/dnsservicequeryrecord-3dns-sd.html
+- Beej's Guide to Unix IPC
+  http://beej.us/guide/bgipc/html/single/bgipc.html
+- Beej's Guides
+  http://beej.us/guide/
+- Beej's Guide to Network Programming
+  https://beej.us/guide/bgnet/
+- Real-Time Communication with Streams Tutorial for iOS
+  https://www.raywenderlich.com/3437391-real-time-communication-with-streams-tutorial-for-ios
+** 5-26
+- https://www.bricklink.com/catalogTree.asp?itemType=P
+- https://nodejs.org/en/docs/guides/getting-started-guide/
+- https://github.com/richardlford/Playjs1
+- https://github.com/DavidVujic/blog
+- https://github.com/DavidVujic/blog/tree/master/es-and-typescript-on-ipad
+- Coding in the dark: ES2015 and TypeScript on an iPad
+  https://davidvujic.blogspot.com/2015/07/coding-in-dark-es2015-and-typescript-on-an-ipad.html
+- Babel is a JavaScript compiler
+  https://babeljs.io/
+- https://github.com/ModuleLoader/es-module-loader
+- https://github.com/basarat/typescript-script
+** 5-27
+- StaSh - Shell Like an Expert in Pythonista
+  https://github.com/ywangd/stash
+- Pulling from github with pythonista
+  https://forum.omz-software.com/topic/3604/pulling-from-github-with-pythonista
+- https://pythonista-tools.github.io/Pythonista-Tools/
+- https://www.google.com/search?q=typescript+on+ipad&oq=typescript+on+ipad&aqs=chrome..69i57.4143j0j7&sourceid=chrome&ie=UTF-8
+- Setting up an iPad for coding is my greatest feat as a computer user
+  https://www.theverge.com/circuitbreaker/2018/3/27/17152482/ipad-pro-web-development-setup-how-to-terminal-apps
+- javascript socket library
+  https://www.google.com/search?q=javascript+socket+library&oq=javascript+socket+library&aqs=chrome..69i57.8150j0j7&sourceid=chrome&ie=UTF-8
+- How to call C/C++ code from Node.js
+  https://medium.com/@tarkus/how-to-call-c-c-code-from-node-js-86a773033892
+- https://github.com/LLK/scratch-gui
+- 

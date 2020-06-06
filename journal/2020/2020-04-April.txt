@@ -1,0 +1,51 @@
+<!--  -*- mode: org; -*- -->
+* April 2020 Journal
+** 4-19
+This is the start of my robotic journal. It has notes on Lego Ev3
+Mindstorms robots and also the Raspberry Pi (3 and 4), and the
+BrickPi3. See links.
+- I used the etcher program to burn a 32GB SD with the ev3dev image
+  from 
+
+* Links to process.
+** 4-19
+- Article that solved my problem with X forwarding into the ev3dev
+  brick.
+  https://www.cyberciti.biz/faq/linux-unix-appleosx-noxauth-program-cannot-forward-with-spoofing/
+- XQuartz, X server for Mac
+  https://www.xquartz.org/
+- Article explaining how to use XQuartz on a mac to get
+  forwarding. You have to start from an xterminal started by XQuartz.
+  Ignore the RED part.
+  https://uisapp2.iu.edu/confluence-prd/pages/viewpage.action?pageId=280461906
+- Set to use pycharm
+  https://www.ev3dev.org/docs/tutorials/setting-up-python-pycharm/
+- Python source for ev3dev
+  https://github.com/ev3dev/ev3dev-lang-python
+- Programming languages for ev3dev
+  https://www.ev3dev.org/docs/programming-languages/
+- Linux Kernel Drivers for ev3dev-jessie
+  http://docs.ev3dev.org/projects/lego-linux-drivers/en/ev3dev-jessie/
+- ev3dev downloads page
+  https://www.ev3dev.org/downloads/
+- ev3dev top level site
+  https://www.ev3dev.org/
+- brickpi3 python page
+  https://www.dexterindustries.com/BrickPi/brickpi3-getting-started-step-4-program-brickpi-robot/brickpi3-getting-started-program-python/
+- brickpi3 tutorials
+  https://www.dexterindustries.com/brickpi3-tutorials-documentation/
+- Talk with Apple wwdc 2019 on swift packages. relate to failure
+  building swiftplayground template on xcode.
+- Google search for solution to swift problem.
+  https://www.google.com/search?safe=off&sxsrf=ALeKk029tAyjUxYWRDn7GYM_WbyYN4DwNA%3A1587308514177&ei=4mecXp6nCsHH_Qak_bGQCg&q=xcode+module+compiled+with+swift+5.1+cannot+be+imported+by+the+swift+5.2+compiler&oq=xcode+module+compiled+with+swift+5.1+cannot+be+imported+by+the+swift+5.2+compiler&gs_lcp=CgZwc3ktYWIQDDoECAAQR1D-RlicXmCXbmgBcAJ4AIABmAGIAZQCkgEDMi4xmAEAoAEBqgEHZ3dzLXdpeg&sclient=psy-ab&ved=0ahUKEwieoIuB4fToAhXBY98KHaR-DKIQ4dUDCAw
+- How to enable vnc on a headless raspberrypi
+  https://www.youtube.com/watch?v=kxtT8PjPBik
+- Talk - Introducing SwiftUI: Building Your First App
+  https://www.youtube.com/watch?v=_1_XkeFUUME
+- https://www.lego.com/en-SG/service/help-topics/bricks-and-sets/themes/mindstorms/download-ev3-software
+- CONNECTING YOUR LEGO® MINDSTORMS® EV3 TO BLUETOOTH
+  https://www.lego.com/en-us/service/help/products/themes-sets/mindstorms/connecting-your-lego-mindstorms-ev3-to-bluetooth-408100000007886
+- https://www.lego.com/cdn/cs/set/assets/blt6879b00ae6951482/LEGO_MINDSTORMS_EV3_Communication_Developer_Kit.pdf
+- http://villamil.org/2017/09/10-ways-to-get-more-out-of-lego-mindstorms/
+- Lego ev3 downloads, including advanced kits (see end)
+  https://www.lego.com/en-us/themes/mindstorms/downloads

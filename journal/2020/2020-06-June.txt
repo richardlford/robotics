@@ -1,0 +1,30 @@
+<!– -*- mode: org; -*- –>
+* Robotics Journal for June 2020
+* Links
+** 6-2
+- SwiftUI Tutorial for Beginners
+  https://www.youtube.com/channel/UC2D6eRvCeMtcF5OGHf1-trw
+- Set up webcam microphone for raspberry pi
+  https://raspberrypi.stackexchange.com/questions/48103/set-up-webcam-microphone-for-raspberry-pi
+- How to connect Logitech c310 HD Webcam to Raspberry pi (Easy)
+  https://www.youtube.com/watch?v=rO968lLdK1g
+- https://linuxhint.com/best_webcams_ubuntu_2020/
+- https://marketplace.zoom.us/docs/guides/build/oauth-app
+- Zoom App Marketplace
+  https://marketplace.zoom.us/docs/guides
+- Zoom Support for Raspberry Pi 4 and Ubuntu Server 19.01 Desktop
+  https://www.raspberrypi.org/forums/viewtopic.php?f=131&t=269833
+- Running Zoom video conferencing client on the Pi
+  https://www.raspberrypi.org/forums/viewtopic.php?t=254367
+- https://zoom.us/download?os=linux
+- Specifying the Scenes Your App Supports
+- https://developer.apple.com/documentation/uikit/app_and_environment/managing_your_app_s_life_cycle
+- https://developer.apple.com/documentation/uikit/app_and_environment
+- https://developer.apple.com/documentation/uikit
+- dotSwift 2020 - Guilherme Rambo - MVC: Many View Controllers, video
+  https://www.youtube.com/watch?v=ZShE3toDPIk&list=PLMW8Xq7bXrG6S41wN5IAv0zYSFj63zYQV&index=3&t=0s
+- https://www.youtube.com/results?search_query=integrating+swiftui+with+uikit
+- https://realm.io/docs/swift/latest
+- What is JSON - JSON Parsing in Swift
+  https://www.youtube.com/watch?v=_TrPJQWD8qs
+

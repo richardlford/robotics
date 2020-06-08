@@ -27,4 +27,20 @@
 - https://realm.io/docs/swift/latest
 - What is JSON - JSON Parsing in Swift
   https://www.youtube.com/watch?v=_TrPJQWD8qs
-
+** 6-8
+- Installing the Snap Store app
+  https://snapcraft.io/docs/installing-snap-store-app
+  https://snapcraft.io/docs/installing-snap-on-raspbian
+- ANBOX - ANDROID IN A BOX
+  https://docs.anbox.io/userguide/install_kernel_modules.html
+  https://docs.anbox.io/userguide/install.html
+  https://anbox.io/
+- https://en.wikipedia.org/wiki/Linux_namespaces
+- https://duovideocallingapp.com/google-duo-for-linux-ubuntu/
+- https://betanews.com/2019/02/27/google-duo-web/
+- https://alternativeto.net/software/google-duo/?platform=linux
+- Database + Magic == Angular Web app
+  https://polterguy.github.io/
+- https://github.com/polterguy/magic
+- Hyperlambda - Probably the coolest .Net Core Programming Language in the World
+  https://dzone.com/articles/hyperlambda-probably-the-coolest-net-core-programm?edition=608292&utm_source=Daily%20Digest&utm_medium=email&utm_campaign=Daily%20Digest%202020-06-06
